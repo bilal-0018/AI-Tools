@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Bilal Ahmed | AI Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1e40af;
+            --accent: #10b981;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #1e293b;
+        }
+
+        /* --- Header: Image on Left --- */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+            padding: 80px 5%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            /* Mobile friendly */
+            border-bottom: 5px solid var(--accent);
+        }
+
+        .profile-box {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 30px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            object-fit: cover;
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-text {
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .header-text p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .uni-tag {
+            display: inline-block;
+            margin-top: 20px;
+            background: rgb(17, 28, 57);
+            box-shadow: 3px 4px 10px rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- Tools Section --- */
+        .container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Fixed Visuals */
+        .card-img {
+            height: 180px;
+            width: 100%;
+            background: #eef2f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .view-btn {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: #f8fafc;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            border: 1px solid var(--primary);
+            transition: 0.3s;
+        }
+
+        .view-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="profile-box">
+            <img src="M Bilal Ahmed.jpg"
+                alt="Muhammad Bilal Ahmed" class="profile-img">
+        </div>
+        <div class="header-text">
+            <p>Assalam-o-Alaikum, I'm</p>
+            <h1>Muhammad Bilal Ahmed</h1>
+            <p>BSAI Student at Superior University <br>Specializing in Intelligent Systems</p>
+            <div class="uni-tag">
+                <i class="fas fa-location-dot"></i> Rahim Yar Khan Campus
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid" id="toolsGrid"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Developed by <a href="https://www.instagram.com/bilal_here_9/" style="color: rgb(148, 163, 184);">Muhammad Bilal Ahmed</a> | BSAI Superior RYK</p>
+    </footer>
+
+    <script>
+        const tools = [
+            { name: "ChatGPT", desc: "The world's leading AI for conversations and problem solving.", link: "https://chatgpt.com", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22758RyM7Cca0P8xCvqAyttaejHZz_YoTfQ&s" },
+            { name: "Midjourney", desc: "Professional AI art generation from text prompts.", link: "https://www.midjourney.com", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" },
+            { name: "GitHub Copilot", desc: "Autocomplete for code. Essential for BSAI developers.", link: "https://github.com/features/copilot", img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=400" },
+            { name: "ElevenLabs", desc: "Top-tier AI voice cloning and text-to-speech.", link: "https://elevenlabs.io", img: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=400" },
+            { name: "Claude AI", desc: "Reliable and safe AI for deep analysis and writing.", link: "https://claude.ai", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=400" },
+            { name: "DALL-E 3", desc: "Advanced image generation integrated with ChatGPT.", link: "https://openai.com/dall-e-3", img: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=400" },
+            { name: "Notion AI", desc: "Smart assistant for notes, docs, and project planning.", link: "https://www.notion.so/product/ai", img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=400" },
+            { name: "Canva AI", desc: "Easy design with Magic Studio and AI editing.", link: "https://www.canva.com", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALEEt06Mn_srvfFDynr00ILhDlRdsI27bYA&s" },
+            { name: "Synthesia", desc: "Convert text to professional video with AI avatars.", link: "https://www.synthesia.io", img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=400" },
+            { name: "Grammarly", desc: "Perfect your English writing and tone with AI.", link: "https://www.grammarly.com", img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=400" },
+            { name: "Perplexity", desc: "Answering engine that gives citations for every claim.", link: "https://www.perplexity.ai", img: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=400" },
+            { name: "Lumen5", desc: "Create marketing videos from blogs automatically.", link: "https://lumen5.com", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400" },
+            { name: "Jasper", desc: "Enterprise-grade AI for marketing and content copy.", link: "https://www.jasper.ai", img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400" },
+            { name: "Otter.ai", desc: "Meeting notes and transcription in real-time.", link: "https://otter.ai", img: "https://images.unsplash.com/photo-1589254065878-42c9da997008?q=80&w=400" },
+            { name: "Stable Diffusion", desc: "Open source image generation with local control.", link: "https://stability.ai", img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400" }
+        ];
+
+        const grid = document.getElementById('toolsGrid');
+        tools.forEach(tool => {
+            grid.innerHTML += `
+            <div class="card">
+                <div class="card-img">
+                    <img src="${tool.img}" alt="${tool.name}" onerror="this.src='https://via.placeholder.com/400x200?text=AI+Tool'">
+                </div>
+                <div class="card-content">
+                    <h3>${tool.name}</h3>
+                    <p style="margin-bottom: 10%;">${tool.desc}</p>
+                    <a href="${tool.link}" target="_blank" class="view-btn">Launch Website</a>
+                </div>
+            </div>
+        `;
+        });
+    </script>
+
+</body>
+
+</html>
